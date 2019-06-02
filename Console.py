@@ -10,6 +10,10 @@ milisegundosEntreAnimacion = 25
 
 def _wait():
     time.sleep(milisegundosEntreAnimacion  / 1000)
+def _write(text):
+    sys.stdout.write(text)
+    sys.stdout.flush()
+
 
 def Input(text):
     Print(text)
@@ -19,13 +23,10 @@ def Print(text):
     if (animaciones):
         if (animacionPorCaracter):
             for char in text:
-                sys.stdout.write(char)
-                sys.stdout.flush()
+                _write(char)
                 _wait()
         else:
-            sys.stdout.write(text)
-            sys.stdout.flush()
+            _write(text)
             _wait()
     else:
-        sys.stdout.write(text)
-        sys.stdout.flush()
+        _write(text)
