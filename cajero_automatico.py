@@ -1,4 +1,4 @@
-# Proyecto: Cajero Automático
+# Proyecto: Simulador de Cajero con Python
 
 # Librerias
 import sys
