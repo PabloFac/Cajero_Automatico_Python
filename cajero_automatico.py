@@ -1,7 +1,13 @@
-#coding=UTF-8
+# Proyecto: Cajero Automático
 
-#cajero automático para practicar
-import sys #terminar un programa 
+# Librerias
+import sys
+from time import sleep
+
+# Configuración
+animaciones = True
+animacionPorCaracter = True
+milisegundosEntreAnimacion = 25
 
 clave = 6424
 usuario = "GabrielaVilaro"
