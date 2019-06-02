@@ -1,8 +1,6 @@
 
 class BankAccount:
-    userDni = 11222333
-    saldo = 10000
-    limiteExtraccion = 2000
+    'Cuenta de Dinero de Cliente del Banco.'
 
     def __init__(self, userDni, saldo, limiteExtraccion):
         self.userDni = userDni
