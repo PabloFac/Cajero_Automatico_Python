@@ -3,9 +3,9 @@
 # Librerias
 import sys
 
-# Librerias Internas
+# Dependencias
+from clases import *
 import Console
-import Operaciones
 import Database
 
 # Programa
