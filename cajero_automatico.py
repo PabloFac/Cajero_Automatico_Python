@@ -7,13 +7,7 @@ import sys
 import Console
 import Operaciones
 
-# Variables
-clave = 6424
-usuario = "GabrielaVilaro"
-saldo = 25000
-limite_ex = 5000
-
-
+# Programa
 Console.Print("Bienvenido/a al cajero automático.")
 
 contrasena = input("\nIngrese su contraseña: ")
