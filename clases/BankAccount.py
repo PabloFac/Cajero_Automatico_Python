@@ -4,11 +4,16 @@ class BankAccount:
     saldo = 10000
     limiteExtraccion = 2000
 
-    def Extract(self, Amount): 
-        if (Amount > limiteExtraccion):
-            raise ValueError("No se puede extraer '%f' cuando el límite es '%f'." % (Amount, limiteExtraccion))
-        else:
-            saldo -= Amount
+    def __init__(self, userDni, saldo, limiteExtraccion):
+        self.userDni = userDni
+        self.saldo = saldo
+        self.limiteExtraccion = limiteExtraccion
 
-    def Deposit(self, Amount): 
-        saldo += Amount
+    def Extract(self, amount): 
+        if (amount > limiteExtraccion):
+            raise ValueError("No se puede extraer '%f' cuando el límite es '%f'." % (amount, self.limiteExtraccion))
+        else:
+            self.saldo -= amount
+
+    def Deposit(self, amount): 
+        self.saldo += amount

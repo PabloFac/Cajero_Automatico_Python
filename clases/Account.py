@@ -5,9 +5,15 @@ class Account:
     username = "admin"
     password = "admin"
 
-    def login(self, Username, Password):
+    def __init__(self, dni, name, username, password):
+        self.dni = dni
+        self.name = name
+        self.username = username
+        self.password = password
 
-        if ((username == Username) and (password == Password)):
+    def login(self, username, password):
+
+        if ((self.username == username) and (self.password == password)):
             return True
         else:
             return False
