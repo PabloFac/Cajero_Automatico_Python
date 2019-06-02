@@ -2,13 +2,14 @@
 
 # Librerias
 import sys
-from time import sleep
 
-# Configuración
-animaciones = True
-animacionPorCaracter = True
-milisegundosEntreAnimacion = 25
+# Librerias Internas
+from animation import Write
 
+Write("Hello World!")
+input("asdk")
+
+# Variables
 clave = 6424
 usuario = "GabrielaVilaro"
 saldo = 25000
