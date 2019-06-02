@@ -87,8 +87,8 @@ if opcion == 1:
                     extraer = int(extraer)
                 else:
                     Console.Print("\nUsted extrajo $", extraer, "de su saldo.")
-                    Console.Print("\nSu saldo actual es: $", extraer_dinero(saldo, extraer))
-                    saldo_actual = extraer_dinero(saldo, extraer)
+                    Console.Print("\nSu saldo actual es: $", Operaciones.Extraccion(saldo, extraer))
+                    saldo_actual = Operaciones.Extraccion(saldo, extraer)
                     saldo = saldo_actual
                     seguir = input("\n¿Desea hacer otra consulta? S/N: ") #mayúsculas
                     if seguir == "S":
@@ -105,7 +105,7 @@ if opcion == 1:
                                     deposito = int(deposito)
                                 else:
                                     Console.Print("\nUsted depositó $", deposito, ".")
-                                    Console.Print("\nSu saldo actual es: ", deposita_dinero(saldo_actual, deposito))
+                                    Console.Print("\nSu saldo actual es: ", Operaciones.Deposito(saldo_actual, deposito))
 
                                     seguir = input("\n¿Desea hacer otra consulta? S/N: ") #mayúsculas
                                     if seguir == "S":

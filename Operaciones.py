@@ -1,6 +1,6 @@
 
-def extraccion(saldo, extraccion): 
+def Extraccion(saldo, extraccion): 
     return (saldo - extraccion)
 
-def deposito(saldo, deposito): 
+def Deposito(saldo, deposito): 
     return (saldo + deposito)
