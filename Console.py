@@ -11,7 +11,7 @@ milisegundosEntreAnimacion = 25
 def _wait():
     time.sleep(milisegundosEntreAnimacion  / 1000)
 
-def Write(text):
+def Print(text):
     if (animaciones):
         if (animacionPorCaracter):
             for char in text:
