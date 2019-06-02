@@ -5,6 +5,7 @@ import sys
 
 # Librerias Internas
 import Console
+import Operaciones
 
 # Variables
 clave = 6424
@@ -12,11 +13,6 @@ usuario = "GabrielaVilaro"
 saldo = 25000
 limite_ex = 5000
 
-def extraer_dinero(x, y): #extracciones
-    return x - y
-
-def deposita_dinero(x, y): #depositos
-    return x + y
 
 Console.Print("Bienvenido/a al cajero automático.")
 
