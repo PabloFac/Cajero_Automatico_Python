@@ -4,18 +4,13 @@
 import sys
 
 # Dependencias
-from Console import Print, Input
+from Console import Println, Input
 from Funciones import *
 
 # Variables 
 exitApplication = False
-intentosDisponibles = 5
+intentosDisponibles = 3
 actualAcc = None
-
-# Configuracion
-Console.animaciones = True    
-Console.animacionPorCaracter = True
-Console.milisegundosEntreAnimacion = 10
 
 # Programa
 IniciarCajero()
@@ -25,14 +20,16 @@ while (exitApplication == False):
             intentosDisponibles -= 1
             actualAcc = Ingresar()
             if (actualAcc == None): 
-                Print("> No se encontraron coincidencias en la base de datos.")
+                Println("> No se encontraron coincidencias en la base de datos.")
             else:
-                Print("> Bienvenido de nuevo, %s." % (actualAcc.name))
+                Println("> Bienvenido de nuevo, %s." % (actualAcc.name))
         else:
-            Print("> Ud. agotó todos sus intentos de inicio de sesión.")
-            Print("> Comuniquese al 0800-000-000 para más información.")
+            Println("> Ud. agotó todos sus intentos de inicio de sesión.")
+            Println("> Comuniquese al 0800-000-000 para más información.")
+            exitApplication = True
     else:
-        # Mostrar operaciones disponibles
+        MostrarOperacionesDisponibles()
+        Input("> Presione enter para salir.")
         # Preguntar sobre operacion a realizar
         # Realizar operacion
         # preguntar si salir
@@ -43,7 +40,6 @@ while (exitApplication == False):
             # borrar pantalla
         # no quiere salir:
             # empezar de nuevo
-        pass
 
-Print("> Que tenga buenos días.")
+Println("> Que tenga buenos días.")
 sys.exit()

@@ -1,9 +1,23 @@
-from Console import Print, Input
+from Console import Println, Input
+from clases.Operacion import Operacion
 import BD
 
+operaciones = {
+    Operacion(0, "1", "Cambiar datos personales"),
+    Operacion(0, "2", "Mostrar Cuentas asociadas"),
+    Operacion(0, "3", "Seleccionar Cuenta"),
+    Operacion(1, "1", "Cambiar Nombre completo"),
+    Operacion(1, "2", "Cambiar Usuario"),
+    Operacion(1, "3", "Cambiar Contraseña"),
+    Operacion(1, "1", "Consulta de Saldo"),
+    Operacion(1, "2", "Extracción"),
+    Operacion(1, "3", "Deposito"),
+}
+
+
 def IniciarCajero():
-    Print("> Iniciando Cajero Automático.")
-    Print("> Ya estamos listos!")
+    Println("> Iniciando Cajero Automático.")
+    Println("> Ya estamos listos!")
 
 def Ingresar():
     logged = False
@@ -20,14 +34,5 @@ def Ingresar():
             return None
 
 def MostrarOperacionesDisponibles():
-    # Cambiar datos personales
-        # Cambiar nombre
-        # Cambiar usuario
-        # Cambiar contraseña
-    # Mostrar cuentas accesibles
-    # Seleccionar cuenta
-        # Consulta de Saldo
-        # Extracción
-        # Deposito
-
-    pass
+    for op in operaciones:
+        Println(op)
