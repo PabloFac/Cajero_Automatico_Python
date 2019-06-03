@@ -4,12 +4,40 @@
 import sys
 
 # Dependencias
-import Console
-import BD
+from Console import Print, Input
+from Funciones import *
 
+# Variables 
+exitApplication = False
+actualAcc = None
+
+# Configuracion
+Console.animaciones = True    
+Console.animacionPorCaracter = True
+Console.milisegundosEntreAnimacion = 10
 
 # Programa
-Console.Print("Bienvenido/a al cajero automático.")
+IniciarCajero()
+while (exitApplication == False):
+    if (actualAcc == None):
+        actualAcc = Ingresar()
+        if (actualAcc == None): 
+            Print("> No se encontraron coincidencias en la base de datos.")
+        else:
+            Print("> Bienvenido de nuevo, %s." % (actualAcc.name))
+    else:
+        # Mostrar operaciones disponibles
+        # Preguntar sobre operacion a realizar
+        # Realizar operacion
+        # preguntar si salir
+        # quiere salir:
+            # saludar
+            # esperar x seg.
+            # salir
+            # borrar pantalla
+        # no quiere salir:
+            # empezar de nuevo
+
 
 contrasena = input("\nIngrese su contraseña: ")
 contrasena = int(contrasena)

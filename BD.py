@@ -1,4 +1,4 @@
-# Base de Datps
+# Base de Datos
 
 # Clases utilizadas por BD
 from clases.Account import Account

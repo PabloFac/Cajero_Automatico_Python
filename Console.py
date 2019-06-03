@@ -8,12 +8,16 @@ animaciones = True
 animacionPorCaracter = True
 milisegundosEntreAnimacion = 25
 
-def _wait():
+# Funciones Privadas
+def __wait():
     time.sleep(milisegundosEntreAnimacion  / 1000)
-def _write(text):
+def __write(text):
     sys.stdout.write(text)
     sys.stdout.flush()
 
+# Funciones Publicas
+def Input():
+    return input()
 
 def Input(text):
     Print(text)
@@ -23,10 +27,10 @@ def Print(text):
     if (animaciones):
         if (animacionPorCaracter):
             for char in text:
-                _write(char)
-                _wait()
+                __write(char)
+                __wait()
         else:
-            _write(text)
-            _wait()
+            __write(text)
+            __wait()
     else:
-        _write(text)
+        __write(text)
