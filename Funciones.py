@@ -35,4 +35,5 @@ def Ingresar():
 
 def MostrarOperacionesDisponibles():
     for op in operaciones:
-        Println(op)
+        if (op.identLevel == 0):
+        Println(str(op))

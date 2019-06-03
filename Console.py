@@ -6,7 +6,7 @@ import time
 # Configuración
 animaciones = True
 animacionPorCaracter = True
-milisegundosEntreAnimacion = 25
+milisegundosEntreAnimacion = 100
 
 # Funciones Privadas
 def __write(text):
@@ -16,7 +16,7 @@ def __write(text):
 # Funciones Publicas
 def Wait():
     time.sleep(milisegundosEntreAnimacion  / 1000)
-    
+
 def Input():
     return input()
 
@@ -35,3 +35,6 @@ def Print(text):
             Wait()
     else:
         __write(text)
+
+def Println(text):
+    Print(text + "\n")
