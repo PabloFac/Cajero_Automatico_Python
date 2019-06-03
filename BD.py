@@ -1,5 +1,3 @@
-# Base de Datos
-
 # Clases utilizadas por BD
 from clases.Account import Account
 from clases.BankAccount import BankAccount 

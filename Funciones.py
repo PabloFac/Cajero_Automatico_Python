@@ -20,4 +20,14 @@ def Ingresar():
             return None
 
 def MostrarOperacionesDisponibles():
-    Print
+    # Cambiar datos personales
+        # Cambiar nombre
+        # Cambiar usuario
+        # Cambiar contraseña
+    # Mostrar cuentas accesibles
+    # Seleccionar cuenta
+        # Consulta de Saldo
+        # Extracción
+        # Deposito
+
+    pass
