@@ -1,6 +1,6 @@
 
 class Account:
-    'Cuenta de Datos Personales de un Cliente del Banco.'
+    'Cuenta de Datos Personales de Cliente del Banco.'
 
     def __init__(self, dni, name, username, password):
         self.dni = dni

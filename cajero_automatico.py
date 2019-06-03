@@ -4,9 +4,9 @@
 import sys
 
 # Dependencias
-from clases import *
 import Console
-import Database
+import BD
+
 
 # Programa
 Console.Print("Bienvenido/a al cajero automático.")
