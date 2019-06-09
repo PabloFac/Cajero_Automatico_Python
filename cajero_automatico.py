@@ -6,21 +6,21 @@ from Funciones import *
 from Console import Println, Input, Wait
 
 # Variables 
+accId = None
 exitApplication = False
 intentosDisponibles = 3
-actualAcc = None
 
 # Programa
 IniciarCajero()
 while (exitApplication == False):
-    if (actualAcc == None):
+    if (accId == None):
         if (intentosDisponibles > 0):
             intentosDisponibles -= 1
-            actualAcc = Ingresar()
-            if (actualAcc == None): 
+            accIdaccId = Ingresar()
+            if (accId == None): 
                 Println("> No se encontraron coincidencias en la base de datos.")
             else:
-                Println("> Bienvenido de nuevo, %s." % (actualAcc.name))
+                Println("> Bienvenido de nuevo, %s." % GetAccountName(accId))
         else:
             Println("> Ud. agotó todos sus intentos de inicio de sesión.")
             Println("> Comuniquese al 0800-000-000 para más información.")
@@ -32,7 +32,7 @@ while (exitApplication == False):
         operacionRealizada = False
         for op in operaciones:
             if (op.keys == inputOperacion):
-                RealizarOperacion(op.id)
+                RealizarOperacion(op.id, accId)
                 operacionRealizada = True
                 break 
 
