@@ -1,7 +1,8 @@
 
 class Operacion:
     
-    def __init__(self, identLevel, group, keys, description):
+    def __init__(self, id, identLevel, group, keys, description):
+        self.id = id 
         self.identLevel = identLevel
         self.group = group
         self.keys = keys

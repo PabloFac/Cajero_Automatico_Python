@@ -12,10 +12,12 @@ milisegundosEntreAnimacion = 50
 def __write(text):
     sys.stdout.write(text)
     sys.stdout.flush()
+def _waitForAnim():
+    Wait(milisegundosEntreAnimacion)
 
 # Funciones Publicas
-def Wait():
-    time.sleep(milisegundosEntreAnimacion  / 1000)
+def Wait(x):
+    time.sleep(x  / 1000)
 
 def Input():
     return input()

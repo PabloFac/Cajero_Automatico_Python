@@ -5,7 +5,7 @@ import sys
 
 # Dependencias
 from Funciones import *
-from Console import Println, Input
+from Console import Println, Input, Wait
 
 # Variables 
 exitApplication = False
@@ -32,17 +32,17 @@ while (exitApplication == False):
         MostrarOperacionesDisponibles(actualGroup)
         inputOperacion = Input("Ingrese la operacion (segun numero) a realizar: ")
 
-        # Preguntar sobre operacion a realizar
-        # Realizar operacion
-        # preguntar si salir
-        # quiere salir:
-            # saludar
-            # esperar x seg.
-            # salir
-            # borrar pantalla
-        # no quiere salir:
-            # empezar de nuevo
-        Input("> Presione enter para salir.")
+        operacionRealizada = False
+        for op in operaciones:
+            if (op.actualGroup == actualGroup):
+                if (operacionRealizada):
+                    break
+                if (op.keys == inputOperacion):
+                    RealizarOperacion(op.id)
+                    operacionRealizada = True
 
-Println("> Que tenga buenos días.")
-sys.exit()
+        if (operacionRealizada == False):
+            Println("Ingresaste '%s' y no supimos que hacer :(" % (inputOperacion))
+               
+        if (QuiereSalir):
+            Salir()
