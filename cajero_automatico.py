@@ -9,7 +9,6 @@ from Console import Println, Input, Wait
 exitApplication = False
 intentosDisponibles = 3
 actualAcc = None
-actualGroup = 0
 
 # Programa
 IniciarCajero()
@@ -27,20 +26,16 @@ while (exitApplication == False):
             Println("> Comuniquese al 0800-000-000 para más información.")
             exitApplication = True
     else:
-        MostrarOperacionesDisponibles(actualGroup)
+        MostrarOperacionesDisponibles()
         inputOperacion = Input("Ingrese la operacion (segun numero) a realizar: ")
 
         operacionRealizada = False
         for op in operaciones:
-            if (op.actualGroup == actualGroup):
-                if (operacionRealizada):
-                    break
-                if (op.keys == inputOperacion):
-                    RealizarOperacion(op.id)
-                    operacionRealizada = True
+            if (op.keys == inputOperacion):
+                RealizarOperacion(op.id)
+                operacionRealizada = True
+                break 
 
         if (operacionRealizada == False):
             Println("Ingresaste '%s' y no supimos que hacer :(" % (inputOperacion))
                
-        if (QuiereSalir):
-            Salir()

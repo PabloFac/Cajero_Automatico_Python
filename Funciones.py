@@ -6,15 +6,14 @@ import BD
 import sys
 
 operaciones = [
-    Operacion(0, 0, 100, "1", "Cambiar datos personales"),
-    Operacion(0, 0, 101, "2", "Mostrar Cuentas asociadas"),
-    Operacion(0, 0, 102, "3", "Seleccionar Cuenta"),
-    Operacion(1, 1, 201, "1", "Cambiar Nombre completo"),
-    Operacion(1, 1, 202, "2", "Cambiar Usuario"),
-    Operacion(1, 1, 203, "3", "Cambiar Contraseña"),
-    Operacion(1, 2, 301, "1", "Consulta de Saldo"),
-    Operacion(1, 2, 302, "2", "Extracción"),
-    Operacion(1, 2, 303, "3", "Deposito"),
+    Operacion(0, 0, 100, "0", "Salir"),
+    Operacion(0, 0, 102, "1", "Mostrar Cuentas asociadas"),
+    Operacion(1, 1, 201, "2", "Cambiar Nombre completo"),
+    Operacion(1, 1, 202, "3", "Cambiar Usuario"),
+    Operacion(1, 1, 203, "4", "Cambiar Contraseña"),
+    Operacion(1, 2, 301, "5", "Consulta de Saldo"),
+    Operacion(1, 2, 302, "6", "Extracción"),
+    Operacion(1, 2, 303, "7", "Deposito"),
 ]
 
 
@@ -37,17 +36,9 @@ def Ingresar():
         else:
             return None
 
-def MostrarOperacionesDisponibles(group):
+def MostrarOperacionesDisponibles():
     for op in operaciones:
-        if (op.group == group):
-            Println(str(op))
-
-def QuiereSalir():
-    entrada = Input("> Ingrese 'exit' sin comillas para salir del Cajero Automático: ")
-    if (entrada == "exit"):
-        return True
-    else:
-        return False
+        Println(str(op))
 
 def Salir():
     Println("> Gracias por utilizar este cajero.")
@@ -56,9 +47,10 @@ def Salir():
     sys.exit()
 
 def RealizarOperacion(id):
-    if (id == "1"):
+    if (id == "100"):
+        Salir()
 
         pass
-    elif (id == "1"):
+    elif (id == "102"):
 
         pass
