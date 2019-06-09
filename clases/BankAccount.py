@@ -2,8 +2,9 @@
 class BankAccount:
     'Cuenta de Dinero de Cliente del Banco.'
 
-    def __init__(self, userDni, saldo, limiteExtraccion):
-        self.userDni = userDni
+    def __init__(self, id, userId, saldo, limiteExtraccion):
+        self.id = id
+        self.userId = userId
         self.saldo = saldo
         self.limiteExtraccion = limiteExtraccion
 

@@ -9,3 +9,4 @@ bankAccounts = []
 # Carga de Base de Datos
 accounts.append(Account(1001, 11222333, "Admin", "admin", "admin"))
 bankAccounts.append(BankAccount(1153, 11222333, 10000, 2500))
+bankAccounts.append(BankAccount(1944, 11222333, 7500, 1000))
