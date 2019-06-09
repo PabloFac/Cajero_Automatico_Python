@@ -29,7 +29,6 @@ while (exitApplication == False):
             exitApplication = True
     else:
         MostrarOperacionesDisponibles()
-        Input("> Presione enter para salir.")
         # Preguntar sobre operacion a realizar
         # Realizar operacion
         # preguntar si salir
@@ -40,6 +39,7 @@ while (exitApplication == False):
             # borrar pantalla
         # no quiere salir:
             # empezar de nuevo
+        Input("> Presione enter para salir.")
 
 Println("> Que tenga buenos días.")
 sys.exit()

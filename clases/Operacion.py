@@ -7,4 +7,4 @@ class Operacion:
         self.description = description
 
     def __str__(self):
-        return ("  " * self.identLevel) + ("%s - %s" % (self.keys, self.description))
+        return (("  " * self.identLevel) + ("%s - %s" % (self.keys, self.description)))

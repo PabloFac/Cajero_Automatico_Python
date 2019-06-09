@@ -6,7 +6,7 @@ import time
 # Configuración
 animaciones = True
 animacionPorCaracter = True
-milisegundosEntreAnimacion = 5
+milisegundosEntreAnimacion = 50
 
 # Funciones Privadas
 def __write(text):

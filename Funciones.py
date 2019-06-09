@@ -2,7 +2,7 @@ from Console import Println, Input
 from clases.Operacion import Operacion
 import BD
 
-operaciones = {
+operaciones = [
     Operacion(0, "1", "Cambiar datos personales"),
     Operacion(0, "2", "Mostrar Cuentas asociadas"),
     Operacion(0, "3", "Seleccionar Cuenta"),
@@ -12,12 +12,13 @@ operaciones = {
     Operacion(1, "1", "Consulta de Saldo"),
     Operacion(1, "2", "Extracción"),
     Operacion(1, "3", "Deposito"),
-}
+]
 
 
 def IniciarCajero():
     Println("> Iniciando Cajero Automático.")
     Println("> Ya estamos listos!")
+    Println("> Acceso por defecto: admin, admin")
 
 def Ingresar():
     logged = False
