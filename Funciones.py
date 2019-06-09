@@ -1,6 +1,9 @@
-from Console import Println, Input
+
+from Console import Println, Input, Wait
 from clases.Operacion import Operacion
 import BD
+
+import sys
 
 operaciones = [
     Operacion(0, 0, 100, "1", "Cambiar datos personales"),
@@ -38,8 +41,6 @@ def MostrarOperacionesDisponibles(group):
     for op in operaciones:
         if (op.group == group):
             Println(str(op))
-
-
 
 def QuiereSalir():
     entrada = Input("> Ingrese 'exit' sin comillas para salir del Cajero Automático: ")

@@ -1,7 +1,5 @@
 # Proyecto: Simulador de Cajero con Python
 
-# Librerias
-import sys
 
 # Dependencias
 from Funciones import *
