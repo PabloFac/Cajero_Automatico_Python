@@ -4,8 +4,8 @@
 import sys
 
 # Dependencias
-from Console import Println, Input
 from Funciones import *
+from Console import Println, Input
 
 # Variables 
 exitApplication = False
