@@ -11,6 +11,7 @@ from Console import Println, Input
 exitApplication = False
 intentosDisponibles = 3
 actualAcc = None
+actualGroup = 0
 
 # Programa
 IniciarCajero()
@@ -28,7 +29,9 @@ while (exitApplication == False):
             Println("> Comuniquese al 0800-000-000 para más información.")
             exitApplication = True
     else:
-        MostrarOperacionesDisponibles()
+        MostrarOperacionesDisponibles(actualGroup)
+        inputOperacion = Input("Ingrese la operacion (segun numero) a realizar: ")
+
         # Preguntar sobre operacion a realizar
         # Realizar operacion
         # preguntar si salir

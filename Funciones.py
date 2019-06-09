@@ -3,15 +3,15 @@ from clases.Operacion import Operacion
 import BD
 
 operaciones = [
-    Operacion(0, "1", "Cambiar datos personales"),
-    Operacion(0, "2", "Mostrar Cuentas asociadas"),
-    Operacion(0, "3", "Seleccionar Cuenta"),
-    Operacion(1, "1", "Cambiar Nombre completo"),
-    Operacion(1, "2", "Cambiar Usuario"),
-    Operacion(1, "3", "Cambiar Contraseña"),
-    Operacion(1, "1", "Consulta de Saldo"),
-    Operacion(1, "2", "Extracción"),
-    Operacion(1, "3", "Deposito"),
+    Operacion(0, 0, "1", "Cambiar datos personales"),
+    Operacion(0, 0, "2", "Mostrar Cuentas asociadas"),
+    Operacion(0, 0, "3", "Seleccionar Cuenta"),
+    Operacion(1, 1, "1", "Cambiar Nombre completo"),
+    Operacion(1, 1, "2", "Cambiar Usuario"),
+    Operacion(1, 1, "3", "Cambiar Contraseña"),
+    Operacion(1, 2, "1", "Consulta de Saldo"),
+    Operacion(1, 2, "2", "Extracción"),
+    Operacion(1, 2, "3", "Deposito"),
 ]
 
 
@@ -34,7 +34,7 @@ def Ingresar():
         else:
             return None
 
-def MostrarOperacionesDisponibles():
+def MostrarOperacionesDisponibles(group):
     for op in operaciones:
-        if (op.identLevel == 0):
+        if (op.group == group):
             Println(str(op))
